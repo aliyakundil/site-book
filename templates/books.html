@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block books %}
+    <div class="container content-lg">
+        <table class="model_table">
+            {% for i in book %}
+            <tr>
+                <th><a href="/update/{{ i.id }}">{{i.id}}</a></th>
+                <th>{{i.title}}</th>
+                <th>{{i.author}}</th>
+                <th>{{i.year}}</th>
+                <th>{{i.genre}}</th>
+                <th><a href="/delete/{{ i.id }}">Удалить</a></th>
+            </tr>
+            {% endfor %}
+        </table>
+    <style type="text/css">
+            table {
+       border-collapse: collapse;
+       /*убираем пустые промежутки между ячейками*/
+       border: 1px solid grey;
+       /*устанавливаем для таблицы внешнюю границу серого цвета толщиной 1px*/
+    }
+          .model_table {
+            margin: 5px;
+            width: 100%;
+          }
+          .model_table tr:nth-child(even) {
+            background-color: #efefef;
+          }
+          .model_table tr:hover {
+            background-color: #cfcfcf;
+          }
+
+    </style>
+    </div>
+</div>
+{% endblock %}
+
+

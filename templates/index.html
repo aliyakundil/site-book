@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+
+{% block index %}
+
+<!--========== SLIDER ==========-->
+        <div class="promo-block 50">
+                        <div class="margin-b-30">
+                            <h1 class="promo-block-title">Книжный <br/> магазин</h1>
+                    <div class="col-sm-6">
+<!--                        <div class="promo-block-img-wrap">-->
+<!--                            <img class="promo-block-img img-responsive" src="https://www.orbita.news/wp-content/uploads/2021/09/istock-949118068_d_850.jpg" align="Avatar">-->
+<!--                        </div>-->
+                    </div>
+                </div>
+                <!--// end row -->
+            </div>
+        </div>
+
+            <style>
+              .promo-block {
+                  background: url('https://www.incimages.com/uploaded_files/image/1920x1080/getty_813319932_383768.jpg');
+              background-size: 100%;
+
+              }
+
+
+            </style>
+        <!--========== SLIDER ==========-->
+
+    <!-- Work -->
+        <div id="work">
+            <div class="container content-lg">
+                <div class="row margin-b-40">
+                    <div class="col-sm-6">
+                        <h2>Библиотека</h2>
+                        <p>Здесь вы сможете найти книги на любой вкус. Имеется в наличии книги о саморазвитии, о бизнесе, о семье и воспитании,  художественная литература на русском и на кыргызском языках, детские книжки, религиозные книги, книги по психологии и много других интересных и полезных книг.
+Книжный дом предоставляет возможность бесплатного чтения книг. Любимую книгу можно совмещать со вкусным кофе.</p>
+                    </div>
+                </div>
+                <!--// end row -->
+
+
+                {% for i in books %}
+                <div class="row-3">
+                    <!-- Latest Products -->
+                    <div class="col-sm-4 sm-margin-b-50">
+                        <div class="margin-b-20">
+                            <div class="wow zoomIn" data-wow-duration=".3" data-wow-delay=".1s">
+                                <img class="img-responsive" src={{i.img}} alt="Latest Products Image">
+                            </div>
+                        </div>
+                        <h4><a href="/update/{{ i.id }}">{{i.title}}</a> <span class="text-uppercase margin-l-20">{{i.genre}}</span></h4>
+                        <p>{{i.year}}</p>
+                        <p>{{i.description}}</p>
+                        <a class="link" href="#">Читать полностью</a>
+                    </div>
+                    <!-- End Latest Products -->
+
+
+            </div>
+            {% endfor %}
+        </div>
+        <!-- End Work -->
+
+                <!-- Contact -->
+        <div id="contact">
+            <div class="bg-color-sky-light">
+                <div class="container content-lg">
+                    <div class="row margin-b-40">
+                        <div class="col-sm-6">
+                           <h2></h2>
+                        </div>
+                    </div>
+                    <!--// end row -->
+
+                    <div class="row">
+                        <div class="col-md-3 col-xs-6 md-margin-b-30">
+                            <h4>Город</h4>
+                            <a href="#">Бишкек, Кыргызстан</a>
+                        </div>
+                        <div class="col-md-3 col-xs-6 md-margin-b-30">
+                            <h4>Телефон</h4>
+                            <a href="#">+996 666 666 666</a>
+                        </div>
+                        <div class="col-md-3 col-xs-6">
+                            <h4>Email</h4>
+                            <a href="mailto:#">qwert@gmail.com</a>
+                        </div>
+                        <div class="col-md-3 col-xs-6">
+                            <h4>Web</h4>
+                            <a href="#">www.www.com</a>
+                        </div>
+                    </div>
+                    <!--// end row -->
+                </div>
+            </div>
+        </div>
+        <!-- End Contact -->
+        <!--========== END PAGE LAYOUT ==========-->
+
+        <!--========== FOOTER ==========-->
+        <footer class="footer">
+            <div class="content container">
+                <div class="row">
+                    <div class="col-xs-6">
+
+                    </div>
+                    <div class="col-xs-6 text-right sm-text-left">
+                        <p class="margin-b-0"><a class="fweight-700" href="http://keenthemes.com/preview/acecv/">Дрим Тим</a> Выполнили: <a class="fweight-700">Левая сторона</a></p>
+                    </div>
+                </div>
+                <!--// end row -->
+            </div>
+        </footer>
+        <!--========== END FOOTER ==========-->
+    <!-- END BODY -->
+
+
+
+
+{% endblock %}

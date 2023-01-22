@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block index %}
+
+
+    <div class="container content-lg">
+                <form method="post">
+                    <div class="mb-3">
+                        <label>Произведение: </label><input type="text" name="title" class="form-control">
+                        <label>Автор: </label><input type="text" name="author" class="form-control">
+                        <label>Год издания: </label><input type="text" name="year" class="form-control">
+                        <label>Жанр: </label><input type="text" name="genre" class="form-control">
+                        <label>Аннотация: </br><textarea class="massage-bt" placeholder="Аннотация" cols="138" rows="5" name="description"></textarea></label></br>
+                        <label>Изображение: </label><input type="text" name="img" class="form-control">
+                        <tr>
+                        <label><input type="submit" value="Сохранить"></label></br>
+                        </tr>
+                    </div>
+                </form>
+
+<!--            <tr>-->
+<!--                <form action="" method="GET">-->
+<!--                    <p><label><input type="submit" value="Поиск"></label></p>-->
+<!--                </form>-->
+<!--            </tr>-->
+    {% for i in get_flashed_messages() %}
+    <div class="flash">
+            {{i}}
+    </div>
+    {% endfor %}
+
+<!--    <section>-->
+<!--        <table class="model_table">-->
+<!--            {% for i in books %}-->
+<!--            <tr>-->
+<!--                <th><a href="/update/{{ i.id }}">{{i.id}}</a></th>-->
+<!--                <th>{{i.title}}</th>-->
+<!--                <th>{{i.author}}</th>-->
+<!--                <th>{{i.year}}</th>-->
+<!--                <th>{{i.genre}}</th>-->
+<!--                <th>{{i.description}}</th>-->
+<!--                <th>{{i.img}}</th>-->
+<!--                <th><a href="/delete/{{ i.id }}">Удалить</a></th>-->
+<!--            </tr>-->
+<!--            {% endfor %}-->
+<!--        </table>-->
+<!--    </section>-->
+
+<!--    <style type="text/css">-->
+<!--            table {-->
+<!--       border-collapse: collapse;-->
+<!--       /*убираем пустые промежутки между ячейками*/-->
+<!--       border: 1px solid grey;-->
+<!--       /*устанавливаем для таблицы внешнюю границу серого цвета толщиной 1px*/-->
+<!--    }-->
+<!--          .model_table {-->
+<!--            margin: 5px;-->
+<!--            width: 100%;-->
+<!--          }-->
+<!--          .model_table tr:nth-child(even) {-->
+<!--            background-color: #efefef;-->
+<!--          }-->
+<!--          .model_table tr:hover {-->
+<!--            background-color: #cfcfcf;-->
+<!--          }-->
+
+<!--    </style>-->
+    </div>
+{% endblock %}

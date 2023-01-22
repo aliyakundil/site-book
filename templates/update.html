@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% block update %}
+
+<div class="container content-lg">
+
+<form method="post">
+  <div class="mb-3">
+    <label for="title" class="form-label">Произведение</label>
+    <input type="text" class="form-control" id="title" aria-describedby="title" name="title" value="{{ books_upd.title }}">
+  </div>
+
+  <div class="mb-3">
+    <label for="title_upd" class="form-label">Изменить произведение</label>
+    <input type="text" class="form-control" id="for_update" aria-describedby="title_upd" name="title_upd" value="{{ books_upd.title }}">
+  </div>
+
+
+    <div class="mb-3">
+    <label for="author" class="form-label">Aвтора</label>
+    <input type="text" class="form-control" id="author" aria-describedby="author" name="author" value="{{ books_upd.author }}">
+    </div>
+
+  <div class="mb-3">
+    <label for="author_upd" class="form-label">Изменить автора</label>
+    <input type="text" class="form-control" id="author_upd_update" aria-describedby="author_upd" name="author_upd" value="{{ books_upd.author }}">
+    </div>
+
+    <div class="mb-3">
+    <label for="year" class="form-label">Год издания</label>
+    <input type="text" class="form-control" id="year" aria-describedby="year" name="year" value="{{ books_upd.year }}">
+  </div>
+
+  <div class="mb-3">
+    <label for="year_upd" class="form-label">Изменить год издания</label>
+    <input type="text" class="form-control" id="year_upd_update" aria-describedby="year_upd" name="year_upd" value="{{ books_upd.year }}">
+  </div>
+
+
+  <div class="mb-3">
+    <label for="genre" class="form-label">Жанр</label>
+    <input type="text" class="form-control" id="genre" aria-describedby="genre" name="genre" value="{{ books_upd.genre }}">
+  </div>
+
+    <div class="mb-3">
+    <label for="genre_upd" class="form-label">Изменить жанр</label>
+    <input type="text" class="form-control" id="genre_upd_update" aria-describedby="genre_upd" name="genre_upd" value="{{ books_upd.genre }}">
+  </div>
+
+
+  <div class="mb-3">
+    <label for="description" class="form-label">Описание</label>
+    <input type="text" class="form-control" id="description" aria-describedby="description" name="description" value="{{ books_upd.description }}">
+  </div>
+
+    <div class="mb-3">
+    <label for="description_upd" class="form-label">Изменить описание</label>
+    <input type="text" class="form-control" id="description_upd_update" aria-describedby="description_upd" name="description_upd" value="{{ books_upd.description }}">
+  </div>
+
+  <div class="mb-3">
+    <label for="img" class="form-label">Изображение</label>
+    <input type="text" class="form-control" id="img" aria-describedby="img_upd" name="img" value="{{ books_upd.img }}">
+  </div>
+
+    <div class="mb-3">
+    <label for="img_upd" class="form-label">Изменить изображение</label>
+    <input type="text" class="form-control" id="img_upd_update" aria-describedby="img_upd" name="img_upd" value="{{ books_upd.img }}">
+  </div>
+
+
+
+  <button type="submit">Обновить</button>
+  <button type="submit">Удалить</button>
+
+</form>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+<form method="post">
+  <div class="mb-3">
+    <label for="avtor" class="form-label">Word</label>
+    <input type="text" class="form-control" id="avtor" aria-describedby="avtor" name="avtor" value="{{ books.avtor }}">
+  </div>
+
+    <div class="mb-3">
+    <label for="avtor_upd" class="form-label">Word for update</label>
+    <input type="text" class="form-control" id="for_update" aria-describedby="avtor_upd" name="avtor_upd" value="{{ books.avtor }}">
+  </div>
+
+  <button type="submit">Update</button>
+</form>
